@@ -1,0 +1,153 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff0f5; /* Lavanda avermelhada bem clara */
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('fundo.jpg'); /* Se quiser uma foto de fundo no topo, coloque uma imagem chamada fundo.jpg */
+    background-color: #d63384; /* Cor rosa forte caso não tenha imagem */
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Sessão de História */
+.story {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    background-color: white;
+    max-width: 800px;
+    margin: -50px auto 30px; /* Sobe um pouco sobre o header */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.story h2 {
+    color: #d63384;
+    margin-bottom: 20px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+}
+
+.story p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+/* Galeria de Fotos */
+.gallery {
+    padding: 2rem;
+    text-align: center;
+}
+
+.gallery h2 {
+    color: #d63384;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Estilo dos Cards das Fotos */
+.photo-card {
+    background: white;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-10px); /* Efeito de flutuar ao passar o mouse */
+}
+
+.image-box {
+    width: 100%;
+    height: 400px; /* Altura fixa para ficar uniforme (formato stories) */
+    overflow: hidden;
+}
+
+.image-box img, .image-box video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a foto preencha sem distorcer */
+}
+
+.message {
+    padding: 20px;
+    background: linear-gradient(to top, #fff0f5, #fff);
+}
+
+.message h3 {
+    color: #be185d;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.message p {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* Rodapé */
+footer {
+    background-color: #be185d;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 50px;
+}
+
+.heart {
+    color: #ff99bb;
+    animation: tumtum 1s infinite;
+    display: inline-block;
+}
+
+@keyframes tumtum {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+    header h1 { font-size: 3rem; }
+    .story { margin: 0; border-radius: 0; }
+    .photo-card { width: 100%; }
+}
